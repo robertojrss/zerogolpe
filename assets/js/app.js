@@ -95,8 +95,13 @@ $("#btn-ouvir").addEventListener("click",function(){
 var entradasEl=$("#entradas");
 ENTRADAS.forEach(function(e){
   var b=document.createElement("button");
-  b.type="button"; b.className="cartao";
-  b.innerHTML="<strong>"+esc(e.titulo)+"</strong><span>"+esc(e.nota)+"</span>";
+  b.type="button";
+  b.className="cartao cartao--"+e.chave;
+  b.innerHTML =
+    '<span class="cartao-icone">'+iconeSituacao(e.chave)+'</span>'+
+    '<span class="cartao-conteudo"><strong class="cartao-titulo">'+esc(e.titulo)+
+    '</strong><span class="cartao-nota">'+esc(e.nota)+'</span></span>'+
+    '<span class="cartao-seta">'+iconeSeta()+'</span>';
   b.addEventListener("click",function(){ mostrarSituacao(e.chave); });
   entradasEl.appendChild(b);
 });
