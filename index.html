@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZeroGolpe, Golpes comuns contra idosos: como reconhecer e o que fazer</title>
+<meta name="description" content="Central de golpes comuns contra idosos no Brasil. Sinais de alerta, exemplos reais e o que fazer se você já caiu. Consulta gratuita e sem cadastro. Relatos são opcionais.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZeroGolpe, Reconheça o golpe antes de perder dinheiro">
+<meta property="og:description" content="45 situações de golpes explicadas em linguagem simples: sinais de alerta e o que fazer. Sem cadastro.">
+<meta property="og:locale" content="pt_BR">
+<meta name="theme-color" content="#0b5c33">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#">
+      <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true" focusable="false">
+        <path d="M15 1 28 6v11c0 8-6 13-13 16C8 30 2 25 2 17V6z" fill="none" stroke="currentColor" stroke-width="2.6"/>
+        <path d="M9.5 17l4 4 7.5-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      ZeroGolpe
+    </a>
+    <div class="ferramentas">
+      <button type="button" id="btn-menos" aria-label="Diminuir o tamanho da letra">A−</button>
+      <button type="button" id="btn-mais" aria-label="Aumentar o tamanho da letra">A+</button>
+      <button type="button" id="btn-contraste" aria-pressed="false">Contraste</button>
+      <button type="button" id="btn-ouvir" aria-pressed="false">🔊 Ouvir</button>
+      <button type="button" class="solido" id="btn-enviar">+ Enviar um golpe</button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<div class="wrap">
+
+  <section id="tela-home">
+    <h1>Desconfia de uma mensagem ou ligação?</h1>
+    <p class="lead">Conheça os sinais de alerta, saiba como se proteger e veja o que fazer se já aconteceu. Sem cadastro, sem pedir seus dados.</p>
+
+    <div class="busca">
+      <label for="q">Pesquisar um golpe</label>
+      <input id="q" type="search" autocomplete="off" placeholder="Ex.: PIX, INSS, motoboy, advogado, filho pedindo dinheiro…">
+    </div>
+    <div id="resultados" hidden></div>
+
+    <h2>O que aconteceu com você?</h2>
+    <p class="lead">Escolha a situação mais parecida. Cada uma leva direto ao que fazer.</p>
+    <div class="grade" id="entradas"></div>
+
+    <h2>Comece por estes golpes</h2>
+    <ul class="lista" id="destaques"></ul>
+    <details id="todos-box">
+      <summary id="todos-resumo">Ver todos os golpes</summary>
+      <div id="todos-lista"></div>
+    </details>
+
+    <div class="caixa">
+      <h3>Antes de clicar ou pagar, responda 4 perguntas</h3>
+      <ul class="chev">
+        <li><strong>Estão com pressa?</strong> Fraudadores costumam pressionar com frases como "só hoje" ou "sua conta será bloqueada".</li>
+        <li><strong>Pediram dinheiro, PIX ou código?</strong> Nenhum banco, INSS ou órgão do governo pede sua senha ou o código que chega por SMS.</li>
+        <li><strong>O número ou o link é novo?</strong> Um número desconhecido pedindo dinheiro ou uma mensagem com link inesperado exigem confirmação.</li>
+        <li><strong>Você foi procurar ou te procuraram?</strong> Se a pessoa chegou até você com uma "oportunidade" ou "problema", desconfie.</li>
+      </ul>
+    </div>
+
+    <div class="caixa" id="quiz-cta">
+      <h3>Você reconheceria um golpe?</h3>
+      <p>Cinco mensagens para você avaliar. Um treino rápido para reconhecer sinais de alerta.</p>
+      <a class="botao botao-destaque" href="#quiz">Fazer o teste</a>
+    </div>
+
+    <div class="caixa">
+      <h3>Recebeu uma mensagem estranha? Conte pra gente.</h3>
+      <p>Seu relato pode ajudar a identificar novos padrões. A versão atual permite preparar e copiar o relato, sem cadastro.</p>
+      <a class="botao texto-forte" href="#enviar">Enviar um golpe</a>
+    </div>
+
+    <h2>Onde denunciar</h2>
+    <ul class="chev">
+      <li><strong>Seu banco.</strong> Se perdeu dinheiro, fale imediatamente com a instituição. Para Pix fraudulento, peça o Mecanismo Especial de Devolução (MED), quando cabível.</li>
+      <li><strong>Banco Central, telefone 145.</strong> Informações e reclamações sobre instituições supervisionadas. Não substitui o contato imediato com o banco.</li>
+      <li><strong>INSS, telefone 135.</strong> Para consultar benefícios, prova de vida e informações sobre consignados.</li>
+      <li><strong>consumidor.gov.br.</strong> Reclamação contra banco, loja ou empresa de telefonia.</li>
+      <li><strong>Disque 100.</strong> Denúncias de violência contra a pessoa idosa, inclusive abuso patrimonial e financeiro.</li>
+      <li><strong>Boletim de ocorrência.</strong> Registre na delegacia, inclusive pela delegacia virtual do seu estado.</li>
+      <li><strong>CERT.br.</strong> Cartilhas públicas de prevenção, proteção de contas e segurança digital.</li>
+    </ul>
+    <p class="lead">Não mande print de conversa com seus dados, senha ou CPF para ninguém, nem para quem diz que vai "recuperar seu dinheiro".</p>
+  </section>
+
+  <section id="tela-golpe" hidden></section>
+
+  <section id="tela-quiz" hidden>
+    <p class="voltar"><a href="#">← Voltar ao início</a></p>
+    <h1>Essa mensagem é golpe?</h1>
+    <p class="lead">Leia cada mensagem como se tivesse chegado no seu celular. Depois escolha.</p>
+    <div id="quiz-lista"></div>
+    <div id="quiz-fim" hidden></div>
+  </section>
+
+  <section id="tela-enviar" hidden>
+    <p class="voltar"><a href="#">← Voltar ao início</a></p>
+    <h1>Conte o que aconteceu</h1>
+    <p class="lead">Se você recebeu uma mensagem, ligação ou visita suspeita, descreva o ocorrido. O relato será enviado por este formulário ao ZeroGolpe depois que você conferir o texto e confirmar o envio.</p>
+
+    <div class="caixa caixa-alerta">
+      <h3>Antes de escrever: 4 regras</h3>
+      <ul class="chev">
+        <li>Descreva <strong>o que a pessoa disse e como chegou até você</strong>. É isso que a gente precisa.</li>
+        <li>Não escreva nome completo de ninguém, CPF, número de conta, agência, senha ou código.</li>
+        <li>Não peça para colar print de conversa. Print costuma ter dados pessoais.</li>
+        <li>Se você perdeu dinheiro agora, <strong>ligue primeiro para o seu banco</strong>. Este site não é canal de emergência.</li>
+      </ul>
+    </div>
+
+    <form class="formulario" id="form-relato" novalidate>
+      <div class="campo">
+        <label for="f-historia">O que aconteceu? <span aria-hidden="true">*</span></label>
+        <span class="ajuda" id="ajuda-historia">Conte com suas palavras: o que a pessoa disse, o que pediu, o que você fez. Quanto mais detalhe sobre a fala do golpista, mais útil.</span>
+        <textarea id="f-historia" required maxlength="4000" aria-describedby="ajuda-historia" placeholder="Ex.: Ligaram dizendo que era do banco, falaram que tinha um PIX de R$ 2 mil na minha conta e pediram para eu confirmar um código que chegou por SMS."></textarea>
+      </div>
+
+      <div class="campo">
+        <label for="f-canal">Como o golpista chegou até você?</label>
+        <select id="f-canal">
+          <option value="">Escolha…</option>
+          <option>WhatsApp</option>
+          <option>Ligação de telefone</option>
+          <option>SMS</option>
+          <option>Pessoalmente, na minha casa</option>
+          <option>Pessoalmente, na rua ou no banco</option>
+          <option>Site ou aplicativo</option>
+          <option>E-mail</option>
+          <option>Rede social (Facebook, Instagram)</option>
+          <option>Não sei dizer</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="f-quando">Quando foi?</label>
+        <select id="f-quando">
+          <option value="">Escolha…</option>
+          <option>Hoje</option>
+          <option>Nesta semana</option>
+          <option>Neste mês</option>
+          <option>Faz mais de um mês</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="f-perda">Você chegou a perder dinheiro?</label>
+        <select id="f-perda">
+          <option value="">Escolha…</option>
+          <option>Não perdi nada</option>
+          <option>Quase perdi, mas percebi antes</option>
+          <option>Perdi dinheiro</option>
+          <option>Perdi acesso à conta ou ao WhatsApp</option>
+          <option>Prefiro não dizer</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="f-quem">Quem está contando?</label>
+        <select id="f-quem">
+          <option value="">Escolha…</option>
+          <option>Eu, tenho 60 anos ou mais</option>
+          <option>Eu, sou familiar ou cuidador(a)</option>
+          <option>Eu, atuo em atendimento (UBS, CRAS, banco, Procon)</option>
+          <option>Prefiro não dizer</option>
+        </select>
+      </div>
+
+      <div class="campo">
+        <label for="f-nome">Como quer ser chamado(a)? <span class="ajuda">(opcional)</span></label>
+        <span class="ajuda">Use apenas um primeiro nome ou apelido. É opcional e não será publicado sem autorização.</span>
+        <input type="text" id="f-nome" autocomplete="off" maxlength="40" placeholder="Ex.: Dona Marli">
+      </div>
+
+      <div class="campo">
+        <label for="f-cidade">Cidade e estado <span class="ajuda">(opcional)</span></label>
+        <span class="ajuda">Ajuda a identificar casos parecidos em uma região. Não informe seu endereço.</span>
+        <input type="text" id="f-cidade" autocomplete="off" maxlength="60" placeholder="Ex.: Contagem, MG">
+      </div>
+
+      <div class="campo">
+        <label for="f-contato">Contato para a gente te responder <span class="ajuda">(opcional)</span></label>
+        <span class="ajuda">E-mail ou telefone. Nunca publicamos isso. Se não quiser, deixe vazio, o relato continua valendo.</span>
+        <input type="text" id="f-contato" autocomplete="off" maxlength="80" placeholder="Ex.: marli@email.com">
+      </div>
+
+      <div>
+        <div class="checagem">
+          <input type="checkbox" id="c-autorizo">
+          <label for="c-autorizo">Opcional: autorizo o uso de uma versão anônima do meu relato em conteúdos educativos, após revisão.</label>
+        </div>
+        <div class="checagem">
+          <input type="checkbox" id="c-limpo">
+          <label for="c-limpo">Confirmo que não escrevi senha, código, CPF, dados bancários nem nome completo de outra pessoa.</label>
+        </div>
+        <div class="checagem">
+          <input type="checkbox" id="c-tratamento" required>
+          <label for="c-tratamento">Autorizo o envio do meu relato para análise. Entendo que o serviço externo Web3Forms processará meu relato e poderá armazená-lo conforme sua política de privacidade.</label>
+        </div>
+      </div>
+      <div class="armadilha" aria-hidden="true">
+        <label for="f-site">Deixe este campo vazio</label>
+        <input type="text" id="f-site" name="_honey" autocomplete="off" tabindex="-1">
+      </div>
+
+      <div class="acoes sem-margem">
+        <button type="submit" class="solido">Revisar meu relato</button>
+        <button type="button" id="b-limpar">Limpar</button>
+      </div>
+      <p class="lead texto-menor">Antes de confirmar o envio, o texto permanece no seu aparelho. Ao enviar, ele passa pelo Web3Forms para chegar ao e-mail do projeto. Não envie documentos nem dados bancários.</p>
+    </form>
+
+    <div id="saida-relato" hidden></div>
+
+    <h2>O que acontece depois</h2>
+    <ul class="lista-num">
+      <li><strong>Recebimento.</strong> Após confirmar, seu relato é encaminhado ao nosso e-mail por um serviço externo. Uma mensagem na tela indicará se o serviço aceitou o envio. Isso não confirma a leitura pela equipe.</li>
+      <li><strong>Verificação.</strong> Novos casos precisam ser verificados em fontes oficiais e em evidências confiáveis antes de publicação.</li>
+      <li><strong>Publicação.</strong> Quando autorizado e verificado, o conteúdo pode ser resumido e anonimizado antes de se tornar uma orientação educativa. O envio não garante publicação nem resposta individual.</li>
+    </ul>
+
+    <details class="detalhes-privacidade">
+      <summary>Como seu relato será tratado</summary>
+      <div class="caixa">
+        <p>Usamos os relatos para analisar possíveis golpes e melhorar orientações de prevenção. Enviar é opcional. O serviço terceirizado Web3Forms recebe o conteúdo e o encaminha para a caixa de e-mail do projeto. Os dados também podem ser retidos pelo provedor conforme sua política de privacidade.</p>
+        <p>Contato, apelido e cidade são opcionais. A autorização para publicar é separada da autorização para enviar. Você pode participar sem autorizar publicação. Evite nomes, telefones e outros dados de terceiros.</p>
+        <p>Ao publicar, precisamos revisar e remover dados que identifiquem pessoas. O formulário não substitui denúncia à polícia ou ao banco.</p>
+      </div>
+    </details>
+
+    <div class="caixa">
+      <h3>O que a gente não publica</h3>
+      <ul class="chev">
+        <li>Nome completo, telefone, e-mail ou endereço de qualquer pessoa.</li>
+        <li>Número de conta, agência, cartão, CPF ou código de verificação.</li>
+        <li>Print de conversa ou foto de documento.</li>
+        <li>Acusação contra empresa ou pessoa específica por nome, a não ser que exista decisão oficial ou alerta público do órgão competente.</li>
+      </ul>
+    </div>
+
+    <div class="caixa caixa-alerta">
+      <h3>Isso está acontecendo agora?</h3>
+      <p>Este site não atende emergência. Se o dinheiro acabou de sair, ligue para o seu banco imediatamente pelo número do verso do cartão. Se há ameaça ou alguém na sua porta, ligue 190.</p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <p><strong>ZeroGolpe</strong> é uma central de prevenção a fraudes contra pessoas idosas. Não é banco, não é governo e não cobra nada.</p>
+    <p class="nao-imprimir">Não pedimos CPF, senha, código de verificação nem foto de documento. Não vendemos empréstimo, crédito, seguro ou "recuperação de dinheiro". Se alguém disser que fala em nome do ZeroGolpe e pedir isso, desconfie e não forneça os dados.</p>
+    <p>Referências públicas: Banco Central, INSS, Febraban, CERT.br, Ministério da Justiça e outras instituições. As fontes de cada tema ficam ao final dos dossiês.</p>
+    <p class="credito">Criado e mantido por <a href="https://www.linkedin.com/in/robertojrs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn de Roberto Junior, robertojrs. Abre em nova aba">Roberto Junior (robertojrs)</a><span class="discreto">. LinkedIn, abre em nova aba.</span></p>
+  </div>
+</footer>
+
+<script src="assets/js/config.js" defer></script>
+<script src="assets/js/data.js" defer></script>
+<script src="assets/js/referencias.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
